@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { data: info } = await useFetch('/api/info')
-const generatedAt = useState(() => new Date().toISOString())
+const { data: info } = await useFetch("/api/info");
+const generatedAt = useState(() => new Date().toISOString());
 </script>
 
 <template>
@@ -55,6 +55,12 @@ const generatedAt = useState(() => new Date().toISOString())
               <strong>{{ info.ip }}</strong>
             </div>
           </div>
+          <div class="block">
+            <div class="contents">
+              <span>Edge IP address</span>
+              <strong>{{ info.edge_ip }}</strong>
+            </div>
+          </div>
         </div>
       </main>
       <div class="debug">Generated at {{ generatedAt }}</div>
@@ -94,8 +100,8 @@ body {
   --bg: white;
   --primary: #00dc82;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--bg);
   color: var(--fg);
 }
