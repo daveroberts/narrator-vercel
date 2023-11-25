@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
     body: JSON.stringify(request_body),
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer: ${process.env.OPEN_API_KEY}`,
+      Authorization: `Bearer ${process.env.OPEN_API_KEY}`,
     },
   });
   let result = await response.json();
