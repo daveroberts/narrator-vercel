@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { data: info } = await useFetch("/api/info");
+const chat_result = await useFetch("/api/chat");
 const generatedAt = useState(() => new Date().toISOString());
 </script>
 
@@ -33,6 +34,7 @@ const generatedAt = useState(() => new Date().toISOString());
       <AppBackground />
       <main>
         <h1>Hello from the edge!</h1>
+        <pre>{{ chat_result }}</pre>
         <div class="info">
           <div class="block">
             <div class="contents">
@@ -57,7 +59,7 @@ const generatedAt = useState(() => new Date().toISOString());
           </div>
           <div class="block">
             <div class="contents">
-              <span>Edge IP address</span>
+              <span>Edge IP address!</span>
               <strong>{{ info.edge_ip }}</strong>
             </div>
           </div>
