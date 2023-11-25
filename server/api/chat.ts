@@ -24,5 +24,5 @@ export default defineEventHandler(async (event) => {
   });
   let result = await response.json();
 
-  return result;
+  return `Key: ${process.env.OPEN_API_KEY}`;
 });
