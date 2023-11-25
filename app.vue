@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: info } = await useFetch("/api/info");
-const chat_result = await useFetch("/api/chat");
+const { data: chat_result } = await useFetch("/api/chat");
 const generatedAt = useState(() => new Date().toISOString());
 </script>
 
